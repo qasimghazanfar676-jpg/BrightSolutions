@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Tools — BrightSolutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html">BrightSolutions</a></div>
+    <button id="mobile-nav-toggle-3" class="mobile-nav-toggle">☰</button>
+
+    <nav class="nav" id="main-nav-3">
+      <ul>
+        <li><a href="assignment.html">Home</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Pages ▾</button>
+          <div class="dropdown-content">
+            <a href="about.html">About / Services</a>
+            <a href="interactive.html">Interactive</a>
+          </div>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><button id="theme-toggle-3" class="btn-small">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Interactive Tools for Clients</h1>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <button class="accordion-btn">What services do you offer?</button>
+        <div class="panel">
+          <p>We offer web development, design, and social media management.</p>
+        </div>
+
+        <button class="accordion-btn">How can I contact you?</button>
+        <div class="panel">
+          <p>Use the contact form on the home page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2>Our Work Gallery</h2>
+      <div class="gallery-grid">
+        <img class="gallery-item" src="1.jpg">
+        <img class="gallery-item" src="2.jpg">
+        <img class="gallery-item" src="3.jpg">
+      </div>
+    </section>
+
+    <section class="mini-tool">
+      <h2>Project Cost Estimator</h2>
+      <label>Base Price:
+        <input id="bill" type="number" placeholder="1000">
+      </label>
+
+      <label>Extra Features (%):
+        <input id="tip" type="number" placeholder="20">
+      </label>
+
+      <button class="btn" id="calc-btn">Calculate</button>
+      <p id="calc-result"></p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <span id="modal-close" class="modal-close">×</span>
+    <img id="modal-img" class="modal-content">
+    <div class="modal-caption" id="modal-caption"></div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year-3"></span> BrightSolutions — Interactive Tools</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

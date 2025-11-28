@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrightSolutions — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">BrightSolutions</a>
+    </div>
+
+    <button id="mobile-nav-toggle" class="mobile-nav-toggle">☰</button>
+
+    <nav class="nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Pages ▾</button>
+          <div class="dropdown-content">
+            <a href="about.html">About / Services</a>
+            <a href="interactive.html">Interactive</a>
+          </div>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="btn-small">🌙</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+  <section class="hero">
+  <div class="hero-text">
+   <h1>We Help Grow Your Business</h1>
+        <p>BrightSolutions provides high-quality digital & marketing services for small businesses.</p>
+        <a class="btn" href="about.html">Explore Services</a>
+      </div>
+
+      <figure class="hero-img">
+        <h2 style="text-align:center; margin-bottom:12px; font-size:1.4rem;">Our Team</h2>
+
+        <div style="
+          display:flex;
+          gap:15px;
+          justify-content:center;
+          align-items:center;
+          flex-wrap:wrap;
+        ">
+          <img src="mee.jpg" alt="Team Member 1" 
+               style="width:140px; height:160px; object-fit:cover; border-radius:10px;">
+          <img src="abd.jpg" alt="Team Member 2" 
+               style="width:140px; height:160px; object-fit:cover; border-radius:10px;">
+        </div>
+      </figure>
+    </section>
+    <section class="features">
+      <article class="card">
+        <h3>Professional Work</h3>
+        <p>We provide reliable and modern solutions for business owners.</p>
+      </article>
+      <article class="card">
+        <h3>Affordable Plans</h3>
+        <p>Small-business friendly rates that match your needs.</p>
+      </article>
+      <article class="card">
+        <h3>24/7 Support</h3>
+        <p>Always here to help your business grow.</p>
+      </article>
+    </section>
+    <section id="contact" class="contact-section">
+      <h2>Get In Touch</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <label>Name
+          <input type="text" id="name" required>
+        </label>
+        <label>Email
+          <input type="email" id="email" required>
+        </label>
+        <label>Message
+          <textarea id="message" required></textarea>
+        </label>
+        <div class="form-row">
+          <button class="btn" type="submit">Send Message</button>
+        </div>
+        <p id="form-status"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BrightSolutions — Small Business Services</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
