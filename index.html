@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,95 +6,258 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BrightSolutions — Home</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
   <header class="site-header">
     <div class="brand">
-      <a href="index.html">BrightSolutions</a>
+      <a href="index.html"><i class="fas fa-lightbulb"></i> BrightSolutions</a>
     </div>
 
     <button id="mobile-nav-toggle" class="mobile-nav-toggle">☰</button>
 
     <nav class="nav" id="main-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
         <li class="dropdown">
-          <button class="dropbtn">Pages ▾</button>
+          <button class="dropbtn"><i class="fas fa-layer-group"></i> Pages ▾</button>
           <div class="dropdown-content">
-            <a href="about.html">About / Services</a>
-            <a href="interactive.html">Interactive</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About / Services</a>
+            <a href="interactive.html"><i class="fas fa-tools"></i> Interactive</a>
+            <a href="appointments.html"><i class="fas fa-calendar-check"></i> Book Appointment</a>
           </div>
         </li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         <li>
-          <button id="theme-toggle" class="btn-small">🌙</button>
+          <button id="theme-toggle" class="btn-small" title="Toggle theme">Mode</button>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-  <section class="hero">
-  <div class="hero-text">
-   <h1>We Help Grow Your Business</h1>
-        <p>BrightSolutions provides high-quality digital & marketing services for small businesses.</p>
-        <a class="btn" href="about.html">Explore Services</a>
+    <!-- Animated Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="animate-text">We Help <span class="highlight">Grow Your Business</span></h1>
+        <p class="hero-subtitle">BrightSolutions provides high-quality digital & marketing services tailored for small businesses like yours.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="about.html"><i class="fas fa-rocket"></i> Explore Services</a>
+          <a class="btn btn-secondary" href="appointments.html"><i class="fas fa-calendar-alt"></i> Book Consultation</a>
+        </div>
+        
+        <!-- Stats Counter -->
+        <div class="stats">
+          <div class="stat-item">
+            <h3 class="counter" data-target="150">2374</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter" data-target="98">3452</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter" data-target="24">79754</h3>
+            <p>Working Hours</p>
+          </div>
+        </div>
       </div>
 
-      <figure class="hero-img">
-        <h2 style="text-align:center; margin-bottom:12px; font-size:1.4rem;">Our Team</h2>
-
-        <div style="
-          display:flex;
-          gap:15px;
-          justify-content:center;
-          align-items:center;
-          flex-wrap:wrap;
-        ">
-          <img src="mee.jpg" alt="Team Member 1" 
-               style="width:140px; height:160px; object-fit:cover; border-radius:10px;">
-          <img src="abd.jpg" alt="Team Member 2" 
-               style="width:140px; height:160px; object-fit:cover; border-radius:10px;">
+      <div class="hero-visual">
+        <div class="floating-card card">
+          <h3><i class="fas fa-clock"></i> Next Available Slot</h3>
+          <p>Tomorrow, 10:00 AM</p>
+          <a href="appointments.html" class="btn btn-small">Book Now</a>
         </div>
-      </figure>
+        
+        <figure class="hero-img">
+          <h2 style="text-align:center; margin-bottom:15px; font-size:1.4rem;">Our Creative Team</h2>
+          <div class="team-images">
+            <div class="team-member">
+              <img src="mee.jpg" alt="Qasim Ghazanfar - Developer">
+              <div class="member-info">
+                <h4>Qasim Ghazanfar</h4>
+                <p>Developer</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="abd.jpg" alt="Muhammad Abdullah - Developer">
+              <div class="member-info">
+                <h4>Muhammad Abdullah</h4>
+                <p>Developer</p>
+              </div>
+            </div>
+          </div>
+          <p class="team-note">Our team is ready to bring your vision to life!</p>
+        </figure>
+      </div>
     </section>
+
+    <!-- Features with icons -->
     <section class="features">
-      <article class="card">
-        <h3>Professional Work</h3>
-        <p>We provide reliable and modern solutions for business owners.</p>
-      </article>
-      <article class="card">
-        <h3>Affordable Plans</h3>
-        <p>Small-business friendly rates that match your needs.</p>
-      </article>
-      <article class="card">
-        <h3>24/7 Support</h3>
-        <p>Always here to help your business grow.</p>
-      </article>
+      <h2 class="section-title">Why Choose BrightSolutions?</h2>
+      <div class="features-grid">
+        <article class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Professional Work</h3>
+          <p>We provide reliable and modern solutions for business owners with proven methodologies.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>Affordable Plans</h3>
+          <p>Small-business friendly rates that match your needs with flexible payment options.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Always here to help your business grow with dedicated support channels.</p>
+        </article>
+      </div>
+    </section>
+    <section class="quick-booking">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Book a free 30-minute consultation with our experts</p>
+      <div class="booking-options">
+        <div class="booking-option">
+          <i class="fas fa-video"></i>
+          <h4>Video Call</h4>
+          <p>Online meeting via Zoom</p>
+          <button class="btn btn-small book-now" data-type="video">Book Now</button>
+        </div>
+        <div class="booking-option">
+          <i class="fas fa-phone"></i>
+          <h4>Phone Call</h4>
+          <p>Direct phone consultation</p>
+          <button class="btn btn-small book-now" data-type="phone">Book Now</button>
+        </div>
+        <div class="booking-option">
+          <i class="fas fa-building"></i>
+          <h4>In Person</h4>
+          <p>Visit our office</p>
+          <button class="btn btn-small book-now" data-type="in-person">Book Now</button>
+        </div>
+      </div>
     </section>
     <section id="contact" class="contact-section">
-      <h2>Get In Touch</h2>
-      <form id="contact-form" class="contact-form" novalidate>
-        <label>Name
-          <input type="text" id="name" required>
-        </label>
-        <label>Email
-          <input type="email" id="email" required>
-        </label>
-        <label>Message
-          <textarea id="message" required></textarea>
-        </label>
-        <div class="form-row">
-          <button class="btn" type="submit">Send Message</button>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3><i class="fas fa-map-marker-alt"></i> Our Office</h3>
+          <p>SEECS, NUST, H-12</p>
+          
+          <h3><i class="fas fa-phone"></i> Contact Info</h3>
+          <p>Phone: 03000695555<br>Email: support@brightsolutions.com</p>
+          
+          <h3><i class="fas fa-clock"></i> Business Hours</h3>
+          <p>Mon-Fri: 9:00 AM - 5:00 PM<br>Sat: 10:00 AM - 2:00 PM</p>
         </div>
-        <p id="form-status"></p>
-      </form>
+        
+        <form id="contact-form" class="contact-form" novalidate>
+          <h3>Send us a message</h3>
+          <label>Name
+            <input type="text" id="name" required placeholder="Your name">
+          </label>
+          <label>Email
+            <input type="email" id="email" required placeholder="you@example.com">
+          </label>
+          <label>Phone
+            <input type="tel" id="phone" placeholder="(555) 123-4567">
+          </label>
+          <label>Service Interested In
+            <select id="service">
+              <option value="">Select a service</option>
+              <option value="web">Website Development</option>
+              <option value="branding">Branding & Design</option>
+              <option value="social">Social Media Management</option>
+              <option value="consulting">Business Consulting</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea id="message" required placeholder="Tell us about your project..."></textarea>
+          </label>
+          <div class="form-row">
+            <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          </div>
+          <p id="form-status"></p>
+        </form>
+      </div>
     </section>
   </main>
+  
   <footer class="site-footer">
-    <p>© <span id="year"></span> BrightSolutions — Small Business Services</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-lightbulb"></i> BrightSolutions</h3>
+        <p>Helping small businesses thrive in the digital world.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Services</a></li>
+          <li><a href="appointments.html">Book Appointment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe for business tips</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Your email" id="newsletter-email">
+          <button class="btn btn-small" id="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> BrightSolutions — Small Business Services</p>
   </footer>
+  <div id="booking-modal" class="modal">
+    <div class="modal-content booking-modal">
+      <span class="modal-close">&times;</span>
+      <h3>Book Your Appointment</h3>
+      <form id="booking-form">
+        <label>Appointment Type
+          <input type="text" id="booking-type" readonly>
+        </label>
+        <label>Name
+          <input type="text" id="booking-name" required>
+        </label>
+        <label>Email
+          <input type="email" id="booking-email" required>
+        </label>
+        <label>Preferred Date
+          <input type="date" id="booking-date" required>
+        </label>
+        <label>Preferred Time
+          <select id="booking-time" required>
+            <option value="">Select time</option>
+            <option value="9:00">9:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="15:00">3:00 PM</option>
+          </select>
+        </label>
+        <label>Notes (Optional)
+          <textarea id="booking-notes"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

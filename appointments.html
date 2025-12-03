@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Appointment — BrightSolutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><i class="fas fa-lightbulb"></i> BrightSolutions</a>
+    </div>
+    <button id="mobile-nav-toggle-4" class="mobile-nav-toggle">☰</button>
+
+    <nav class="nav" id="main-nav-4">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+          <button class="dropbtn"><i class="fas fa-layer-group"></i> Pages ▾</button>
+          <div class="dropdown-content">
+            <a href="about.html"><i class="fas fa-info-circle"></i> About / Services</a>
+            <a href="interactive.html"><i class="fas fa-tools"></i> Interactive</a>
+            <a href="appointments.html" class="active"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+          </div>
+        </li>
+        <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><button id="theme-toggle-4" class="btn-small">Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="appointment-hero">
+      <h1>Book Your Appointment</h1>
+      <p>Schedule a consultation with our experts to discuss your project</p>
+    </section>
+
+    <div class="appointment-container">
+      <div class="appointment-form-container">
+        <h2><i class="fas fa-calendar-plus"></i> Schedule Appointment</h2>
+        <form id="appointment-form">
+          <div class="form-group">
+            <label for="service-type">Service Type</label>
+            <select id="service-type" required>
+              <option value="">Select a service</option>
+              <option value="consultation">Free Consultation</option>
+              <option value="web">Website Development</option>
+              <option value="branding">Branding & Design</option>
+              <option value="social">Social Media Management</option>
+              <option value="seo">SEO Services</option>
+              <option value="maintenance">Website Maintenance</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-name">Full Name</label>
+            <input type="text" id="appointment-name" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-email">Email Address</label>
+            <input type="email" id="appointment-email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-phone">Phone Number</label>
+            <input type="tel" id="appointment-phone" placeholder="03000695555">
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-date">Preferred Date</label>
+            <input type="date" id="appointment-date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-time">Preferred Time</label>
+            <select id="appointment-time" required>
+              <option value="">Select time slot</option>
+              <option value="9:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-duration">Duration</label>
+            <select id="appointment-duration">
+              <option value="30">30 minutes</option>
+              <option value="60" selected>60 minutes</option>
+              <option value="90">90 minutes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-method">Meeting Method</label>
+            <div class="method-options">
+              <label class="method-option">
+                <input type="radio" name="method" value="video" checked>
+                <span><i class="fas fa-video"></i> Video Call</span>
+              </label>
+              <label class="method-option">
+                <input type="radio" name="method" value="phone">
+                <span><i class="fas fa-phone"></i> Phone Call</span>
+              </label>
+              <label class="method-option">
+                <input type="radio" name="method" value="in-person">
+                <span><i class="fas fa-building"></i> In Person</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment-notes">Additional Notes</label>
+            <textarea id="appointment-notes" placeholder="Tell us about your project or specific needs..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">
+            <i class="fas fa-calendar-check"></i> Book Appointment
+          </button>
+          
+          <p id="appointment-status"></p>
+        </form>
+      </div>
+
+      <div class="appointment-info">
+        <div class="info-card">
+          <h3><i class="fas fa-info-circle"></i> What to Expect</h3>
+          <ul>
+            <li><strong>Free Consultation:</strong> First meeting is always free</li>
+            <li><strong>Expert Advice:</strong> Get tailored recommendations</li>
+            <li><strong>No Pressure:</strong> No obligation to purchase</li>
+            <li><strong>Action Plan:</strong> Receive a clear roadmap</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-clock"></i> Available Time Slots</h3>
+          <div class="time-slots">
+            <div class="slot available">
+              <span>Mon-Fri</span>
+              <span>9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="slot available">
+              <span>Saturday</span>
+              <span>10:00 AM - 2:00 PM</span>
+            </div>
+            <div class="slot unavailable">
+              <span>Sunday</span>
+              <span>Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-calendar-alt"></i> Upcoming Availability</h3>
+          <div class="availability-calendar">
+            <div class="calendar-day available">
+              <span>Today</span>
+              <span>3 slots</span>
+            </div>
+            <div class="calendar-day available">
+              <span>Tomorrow</span>
+              <span>5 slots</span>
+            </div>
+            <div class="calendar-day available">
+              <span>Day 3</span>
+              <span>4 slots</span>
+            </div>
+            <div class="calendar-day limited">
+              <span>Day 4</span>
+              <span>2 slots</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-headset"></i> Need Immediate Help?</h3>
+          <p>Call us directly at:</p>
+          <p class="contact-phone"><i class="fas fa-phone"></i> 03000695555</p>
+          <p>Or email: <a href="mailto:support@brightsolutions.com">support@brightsolutions.com</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="confirmation-modal" class="modal">
+      <div class="modal-content confirmation-modal">
+        <div class="confirmation-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Appointment Confirmed!</h3>
+        <div id="appointment-details">
+
+        </div>
+        <p>You will receive a confirmation email shortly.</p>
+        <div class="confirmation-actions">
+          <button class="btn" id="close-confirmation">Close</button>
+          <button class="btn btn-secondary" id="add-to-calendar">
+            <i class="fas fa-calendar-plus"></i> Add to Calendar
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year-4"></span> BrightSolutions — Appointment Booking</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
